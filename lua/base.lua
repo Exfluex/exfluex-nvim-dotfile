@@ -19,7 +19,10 @@ function M.configure()
     vim.cmd [[
         syntax on
     ]]
-
+    --- set timeoutlen for which key
+    vim.cmd [[
+        set timeoutlen=400
+    ]]
 end
 
 
