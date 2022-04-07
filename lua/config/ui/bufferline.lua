@@ -1,8 +1,18 @@
 vim.opt.termguicolors = true
+local function contains(table, val)
+   for i=1,#table do
+      if table[i] == val then 
+         return true
+      end
+   end
+   return false
+end
+
 require("bufferline").setup{
     options={
         custom_filter= function(buf_number,buf_numbers)
-            if vim.bo[buf_number].filetype == "" then
+            local except = {'','checkhealth','tagbar'}
+            if contains(except,vim.bo[buf_number].filetype)  then
                 return false
             end
             return true

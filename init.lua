@@ -1,6 +1,6 @@
 require('base').configure()
-
 require('plugins').setup()
+
 
 require('mapping')
 
