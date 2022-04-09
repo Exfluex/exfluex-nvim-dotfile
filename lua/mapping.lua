@@ -3,11 +3,6 @@ vim.cmd [[
     :nnoremap <space> <Nop>
     let mapleader=" "
 ]]
-
-vim.cmd [[
-    inoremap jk <ESC>
-]]
-
 --- telescope mapping
 vim.cmd [[
     " Find files using Telescope command-line sugar.
@@ -30,7 +25,7 @@ vim.cmd [[
     nnoremap <leader>tr    :Neotree toggle<CR>
 ]]
 
--- 
+--
 -- toggle window handled by tmux-vim-navigator
 --
 
@@ -202,6 +197,11 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Customized
+
+" Show Doc
+nnoremap <silent> K :call CocAction('doHover')<CR>
 ]]
 
 vim.cmd [[
@@ -213,4 +213,14 @@ vim.cmd [[
 " Toggle TagBar
     nmap <leader>tg :TagbarToggle<CR>
 ]]
+-- bufferline keybinding
+vim.cmd [[
+    nnoremap <silent><leader>bh :BufferLineCycleNext<CR>
+    nnoremap <silent><leader>bl :BufferLineCyclePrev<CR> 
+]]
 
+
+-- vista
+vim.cmd [[
+    nnoremap <silent><leader>tf :Vista<CR>
+]]

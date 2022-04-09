@@ -18,6 +18,7 @@ function M.configure()
 
     vim.cmd [[
         syntax on
+        set showmatch
     ]]
     --- set timeoutlen for which key
     vim.cmd [[
